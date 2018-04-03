@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Posts from './Posts';
 import PostDetails from './PostDetails';
 import AddPost from './AddPost';
+import EditPost from './EditPost';
 import About from './About';
 
 const Main = () => (
@@ -11,6 +12,7 @@ const Main = () => (
 		<Switch>
 			<Route exact path='/' component={Posts}/>
 			<Route exact path="/posts/add" component={AddPost}/>
+			<Route exact path="/posts/edit/:id" component={EditPost}/>
 			<Route exact path="/posts/:id" component={PostDetails}/>
 			<Route exact path='/about' component={About}/>
 		</Switch>
